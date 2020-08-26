@@ -1,0 +1,130 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-color:#701d54;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width:85%;
+}
+
+header{
+    height:118px;
+}
+
+nav{
+    background-color:rgba(0, 0, 0, 0.301) ;
+    text-align: center;
+    padding:14px 20px;
+}
+
+main{
+    height:400px;
+    text-align: left;
+    padding-top:80px ;
+    padding-left:240px ;
+    padding-right: 240px;
+}
+
+footer{
+    background-color:rgba(0, 0, 0, 0.466) ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h1{
+    font-size: 30px;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    
+}
+
+p{
+    font-size: 18px;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+}
+
+a{
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+footer p{
+    font-size: 40px;
+    text-align: center;
+    color: rgb(89, 160, 223);
+    
+
+}
+
+h3{
+    font-size:70px;
+    color:grey;
+    font-family: 'Roboto Slab', serif;
+}
+
+p{
+    font-size:20px;
+    color: rgba(255, 255, 255, 0.877);
+}
+
+li{
+    font-size:20px;
+    color: rgba(197, 197, 197, 0.712);
+    margin-bottom:10px;
+}
+
+
+img{
+    position: relative;
+    margin-left:580px;
+    margin-top:-20px;
+}
+
+.stars{
+    color:rgb(216, 216, 69);
+}
+
+input[type=email]{
+    margin-left:15px;
+    font-size: 30px;
+}
+
+#contact p{
+    text-align: left;
+    color:white;
+    font-size:15px;
+    margin-left:15px;
+}
+
+.button{
+    background-color: white; 
+    color: black;
+    font-family: 'Playfair Display', serif;
+    padding: 11px 25px;
+    border-radius: 10px;
+    font-size:15px;
+    text-decoration: none;
+}
+
+#work img{
+    margin:50px 20px;
+}
+section{
+    position: relative;
+    margin-top:-300px;
+}
