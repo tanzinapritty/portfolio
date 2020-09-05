@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <style>
+        #git{
+            width: 70%;
+            background-color: rgb(174, 177, 190);
+            margin-bottom: 25px;  
+            padding: 10px;
+        
+        }
+        ul{
+            clear: both;
+            float: right;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>List of Github Users</h1>
+    <div id="users"></div>
+    <button id="button">Load Github Users</button>
+    <script>
+        document.getElementById('button').addEventListener('click', showData);
+        function showData() {
+            var req = new XMLHttpRequest();
+            req.open('GET', 'https://api.github.com/users', true);
+            req.onload = function(){
+                if(req.status==200){
+                    var people = JSON.parse(req.responseText);
+                    var output ='';
+                    for(var i in people){
+                        output +=
+                        '<div id="git">' +
+                        '<img src="'+people[i].avatar_url+'"width="200" height="200">'+
+                        '<ul>' +
+                        '<li>ID: '+people[i].id+'</li>' +
+                        '<li>Login: '+people[i].login+'</li>' +
+                        '<li>Reposite Link:'+people[i].repos_url +'</li>'+
+                        '<li>URL:'+people[i].url +'</li>'+
+                        '<li>HTML URL:'+people[i].html_url +'</li>'+
+                        '<li>Starred URL:'+people[i].starred_url +'</li>'+
+                        '</ul>' +
+                        '</div>';
+                    }
+                    document.getElementById('users').innerHTML=output;
+                }
+            }
+            req.send();
+        }
+    </script>
+</body>
+</html>
